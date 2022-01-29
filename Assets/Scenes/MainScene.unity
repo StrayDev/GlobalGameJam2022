@@ -131,9 +131,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 1318119631}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
       propertyPath: ghostPrefab
       value: 
       objectReference: {fileID: 3234401658839816732, guid: 146773da3add3ba43aa11bb2f8975a26, type: 3}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: maximumScrollSpeed
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
       propertyPath: chanceForGhostToSpawn
       value: 20
@@ -162,6 +170,114 @@ PrefabInstance:
       propertyPath: objectSpawnPoints.Array.data[4]
       value: 
       objectReference: {fileID: 754542740}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[2].time
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[3].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[0].value
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[1].value
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[2].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[3].value
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[0].inSlope
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[1].inSlope
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[2].inSlope
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[3].inSlope
+      value: 6.426568
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[0].outSlope
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[1].outSlope
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[2].inWeight
+      value: 0.19987822
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[2].outSlope
+      value: 0.6762263
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[3].inWeight
+      value: 0.16065957
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[3].outSlope
+      value: 2.5000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[2].outWeight
+      value: 0.4260716
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[0].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[1].tangentMode
+      value: 69
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[2].tangentMode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[3].tangentMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: scrollSpeedCurve.m_Curve.Array.data[2].weightedMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4380475537499401275, guid: 50426cb884518fe45997907dafca79d3, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -424,6 +540,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4dd859e3c5a62e6408e7a1327ae7fbb4, type: 2}
+    - target: {fileID: 7483432277861433011, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
+      propertyPath: isPhysical
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7483432277861433011, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
       propertyPath: pickUpGhost.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -772,6 +892,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 146773da3add3ba43aa11bb2f8975a26, type: 3}
+--- !u!114 &1318119631 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3714854932360199288, guid: 8d2c96ba77b83934e88a296644ffa0db, type: 3}
+  m_PrefabInstance: {fileID: 1688997433}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35dac0011aed1b4489370c0e88f721bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1319297096 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5852913895395337200, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
@@ -954,7 +1085,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7483432277861433011, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
       propertyPath: isPhysical
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7483432277861433011, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
       propertyPath: pickUpGhost.m_PersistentCalls.m_Calls.Array.size
@@ -1032,6 +1163,10 @@ PrefabInstance:
     - target: {fileID: 146657134735896086, guid: 8d2c96ba77b83934e88a296644ffa0db, type: 3}
       propertyPath: m_Name
       value: TimerSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714854932360199288, guid: 8d2c96ba77b83934e88a296644ffa0db, type: 3}
+      propertyPath: CountDownTime
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 5299127145318795189, guid: 8d2c96ba77b83934e88a296644ffa0db, type: 3}
       propertyPath: m_RootOrder

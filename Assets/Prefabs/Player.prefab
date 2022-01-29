@@ -190,7 +190,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3195099806048173404}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -0.5, z: -1.5}
+  m_LocalPosition: {x: 1, y: -0.5, z: -1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -364,6 +364,11 @@ MonoBehaviour:
   player: 0
   moved: 0
   _laneScript: {fileID: 0}
+  canMove: 0
+  canSwap: 0
+  onControlSwapEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &4244887748435862066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,6 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLane: 1
+  MOVE_DELAY: 0.3
   _inputHandler: {fileID: 0}
 --- !u!114 &7483432277861433011
 MonoBehaviour:
@@ -391,5 +397,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ghostAttachPoint: {fileID: 6917079239311985641}
-  ghostSpacing: 2
+  ghostSpacing: 0.5
   isPhysical: 0
+  pickUpGhost:
+    m_PersistentCalls:
+      m_Calls: []
