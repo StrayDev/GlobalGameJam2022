@@ -50,6 +50,8 @@ public class InputHandler : MonoBehaviour
             // inactive
             _input.Player.SwapControl.performed += OnSwap;
         }
+
+        _laneScript = this.GetComponent<LaneScript>();
     }
 
     private void OnDisable()
