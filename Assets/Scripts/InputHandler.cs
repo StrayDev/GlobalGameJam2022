@@ -9,6 +9,8 @@ public enum Player
 public class InputHandler : MonoBehaviour
 {
     [SerializeField] private Player player = Player.PlayerOne;
+    [SerializeField] private bool moved = false;
+    [SerializeField] private int lanes = 5;
     
     private InputActions _input = default;
     private InputDevice _device = default;
