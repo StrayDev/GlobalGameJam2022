@@ -24,6 +24,7 @@ public class GameTimer : MonoBehaviour
             currentTime--;
             text.text = currentTime.ToString();
         }
+        loadEndScene.LoadTimesUp();
         //Game Over here, likely using another script.
     }
 }

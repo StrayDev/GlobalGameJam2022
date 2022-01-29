@@ -8,7 +8,8 @@ public static class GameData
     public static InputDevice Player2Device = null;
 
     // core
-    public static int score = 0;
+    public static int p1_score = 200;
+    public static int p2_score = 300;
 
     // Lane Info
     public static int Lane_Count = 5;
@@ -18,5 +19,5 @@ public static class GameData
 
     // Functions
     public static float getLaneXPos(float _lane) => Lane_Start_X + Lane_Width*_lane;
-    public static void resetScore() { score = 0; }
+    public static void resetAllScore() { p1_score = 0; p2_score = 0; }
 }
