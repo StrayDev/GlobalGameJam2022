@@ -78,4 +78,9 @@ public class PlayerTrain : MonoBehaviour
             Destroy(ghost.gameObject);
         }
     }
+
+    public void SetPhysical(bool physical)
+    {
+        isPhysical = physical;
+    }
 }
