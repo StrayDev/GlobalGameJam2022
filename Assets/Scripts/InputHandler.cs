@@ -26,8 +26,11 @@ public class InputHandler : MonoBehaviour
             _input.devices = new[] { _device };
         }
         // set colour 
-        var material = GetComponent<Renderer>().material;
-        material.color = player == Player.PlayerOne ? Color.blue : Color.green;
+        foreach (var renderer in GetComponentsInChildren<Renderer>())
+        {
+            var material = renderer.material;
+            material.color = player == Player.PlayerOne ? Color.blue : Color.green;
+        }
 
         // set callbacks
         _input.Player.Horizontal.performed += OnMove;
