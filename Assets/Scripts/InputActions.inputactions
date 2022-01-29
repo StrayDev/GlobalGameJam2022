@@ -85,7 +85,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Select",
+                    "name": "SwapControl",
                     "type": "Button",
                     "id": "3f4dfa56-d086-418b-8e25-6da158d95f39",
                     "expectedControlType": "Button",
@@ -168,7 +168,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard & Mouse",
-                    "action": "Select",
+                    "action": "SwapControl",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3dacb5aa-a8f5-40b7-82fd-ed159b1ee2c5",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "GamePadXbox",
+                    "action": "SwapControl",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
