@@ -1,18 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-
 public class SyncLanes : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] List<Transform> spawn_points;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Start() {
+        for (int i = 0; i < spawn_points.Count; i++)
+        {
+            spawn_points[i].position = new Vector3(GameData.getLaneXPos(i),spawn_points[i].position.y,spawn_points[i].position.z);
+        }
     }
 }

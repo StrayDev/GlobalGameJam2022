@@ -63,12 +63,16 @@ public class TrackTileController : MonoBehaviour
     }
 
     private void TrackSpawned(Transform _track_transform) {
-        if (rnd.Next(101) <= chanceForGhostToSpawn && uncollected_ghosts < 10) {
+        if (rnd.Next(101) <= chanceForGhostToSpawn && uncollected_ghosts <= 10) {
             Transform spawn_point = objectSpawnPoints[rnd.Next(objectSpawnPoints.Count)];
             GameObject ghost = Instantiate(ghostPrefab,spawn_point.transform);
             ghost.transform.parent = _track_transform;
             list_of_ghosts.Add(ghost);
             uncollected_ghosts += 1;
         }
+    }
+
+    public void ghostPickedUp() {
+        uncollected_ghosts -= 1;
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerTrain : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class PlayerTrain : MonoBehaviour
 
     [SerializeField]
     private bool isPhysical;
+
+    [SerializeField] UnityEvent pickUpGhost = default; 
 
     private List<Ghost> ghostsAttached;
 
@@ -48,6 +51,7 @@ public class PlayerTrain : MonoBehaviour
             ghostParent.transform.position = ghostAttachPoint.position - (transform.forward * ghostSpacing * Mathf.Ceil(numGhosts/2) + (transform.right * (numGhosts % 2)));
             ghostParent.GetComponentInChildren<Collider>().enabled = false;
             numGhosts++;
+            pickUpGhost?.Invoke();
             ghostsAttached.Add(ghostParent);
         }
     }

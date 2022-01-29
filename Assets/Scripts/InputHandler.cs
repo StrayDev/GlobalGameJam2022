@@ -28,7 +28,10 @@ public class InputHandler : MonoBehaviour
         
         // set device
         _device = player == Player.PlayerOne ? GameData.Player1Device : GameData.Player2Device;
-        _input.devices = new[] { _device };
+        
+        if (GameData.Player1Device != null) {
+            _input.devices = new[] { _device };
+        }
         
         // set colour 
         foreach(var renderer in GetComponentsInChildren<Renderer>())

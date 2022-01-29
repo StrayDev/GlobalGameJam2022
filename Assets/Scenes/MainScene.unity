@@ -135,6 +135,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3234401658839816732, guid: 146773da3add3ba43aa11bb2f8975a26, type: 3}
     - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+      propertyPath: chanceForGhostToSpawn
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
       propertyPath: objectSpawnPoints.Array.size
       value: 5
       objectReference: {fileID: 0}
@@ -213,6 +217,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4380475537499401275, guid: 50426cb884518fe45997907dafca79d3, type: 3}
   m_PrefabInstance: {fileID: 248008504}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &305332421 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
+  m_PrefabInstance: {fileID: 248008504}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a501c7a4f4a4634e83f25df880e3efa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &309865282
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,6 +400,34 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4dd859e3c5a62e6408e7a1327ae7fbb4, type: 2}
+    - target: {fileID: 7483432277861433011, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
+      propertyPath: pickUpGhost.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483432277861433011, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
+      propertyPath: pickUpGhost.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483432277861433011, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
+      propertyPath: pickUpGhost.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 305332421}
+    - target: {fileID: 7483432277861433011, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
+      propertyPath: pickUpGhost.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483432277861433011, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
+      propertyPath: pickUpGhost.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ghostPickedUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483432277861433011, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
+      propertyPath: pickUpGhost.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TrackTileController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483432277861433011, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
+      propertyPath: pickUpGhost.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
 --- !u!1 &690609975
@@ -396,6 +439,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 690609976}
+  - component: {fileID: 690609977}
   m_Layer: 0
   m_Name: SpawnPoints
   m_TagString: Untagged
@@ -423,6 +467,24 @@ Transform:
   m_Father: {fileID: 248008505}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &690609977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690609975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2000e43c2544e464cad6b6feefd9cd71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawn_points:
+  - {fileID: 309865283}
+  - {fileID: 1973577878}
+  - {fileID: 473331704}
+  - {fileID: 1653287975}
+  - {fileID: 754542740}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,6 +826,34 @@ PrefabInstance:
     - target: {fileID: 7483432277861433011, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
       propertyPath: isPhysical
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483432277861433011, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
+      propertyPath: pickUpGhost.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483432277861433011, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
+      propertyPath: pickUpGhost.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483432277861433011, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
+      propertyPath: pickUpGhost.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 305332421}
+    - target: {fileID: 7483432277861433011, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
+      propertyPath: pickUpGhost.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483432277861433011, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
+      propertyPath: pickUpGhost.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ghostPickedUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483432277861433011, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
+      propertyPath: pickUpGhost.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TrackTileController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483432277861433011, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
+      propertyPath: pickUpGhost.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
