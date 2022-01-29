@@ -6,9 +6,7 @@ public class LaneScript : MonoBehaviour
 {
     [SerializeField] private int currentLane = 3;
     public int CurrentLane => currentLane;
-    [SerializeField] private const int MAX_LANE = 4;
-    [SerializeField] private const float X_DISTANCE = 2f;
-    [SerializeField] private const float X_START = -4f;
+    [SerializeField] private const float MOVE_DELAY = 0.3f;
     [SerializeField] private InputHandler _inputHandler;
 
     private bool moving = false;
@@ -18,25 +16,22 @@ public class LaneScript : MonoBehaviour
     {
         _inputHandler = this.GetComponent<InputHandler>();
         Vector3 pos = _inputHandler.gameObject.transform.position;
-        _inputHandler.transform.position = new Vector3(X_START + X_DISTANCE * currentLane, pos.y,pos.z);
+        _inputHandler.transform.position = new Vector3(GameData.Lane_Start_X + GameData.Lane_Width * currentLane, pos.y,pos.z);
         moving = false;
     }
     void Update()
     {
-        /*
         if (moving)
         {
             Vector3 pos = _inputHandler.gameObject.transform.position;
-            
+            this.transform.position = new Vector3(Mathf.Lerp(pos.x, destination, MOVE_DELAY), pos.y, pos.z);
         }
-        */
     }
     public void SetLane(float value)
     {
         if (!_inputHandler.Moved() && value > 0.1f)
         {
-            Debug.Log("Move Right Activated");
-            if (currentLane < MAX_LANE)
+            if (currentLane < GameData.Lane_Count-1)
             {
                 currentLane++;
             }
@@ -45,7 +40,6 @@ public class LaneScript : MonoBehaviour
         }
         if (!_inputHandler.Moved() && value < -0.1f)
         {
-            Debug.Log("Move left Activated");
             if (currentLane > 0)
             {
                 currentLane--;
@@ -57,13 +51,10 @@ public class LaneScript : MonoBehaviour
 
     IEnumerator movePlayer()
     {
-        //destination = X_START + X_DISTANCE * currentLane;
+        destination = GameData.Lane_Start_X + GameData.Lane_Width * currentLane;
         moving = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(MOVE_DELAY);
         moving = false;
-        Vector3 pos = this.transform.position;
-        this.transform.position = new Vector3(X_START + X_DISTANCE * currentLane, pos.y, pos.z);
-        Debug.Log("Finished Moving Player");
         _inputHandler.setMoved(false);
     }
 
@@ -71,7 +62,7 @@ public class LaneScript : MonoBehaviour
     {
         currentLane = new_lane;
         Vector3 pos = this.transform.position;
-        this.transform.position = new Vector3(X_START + X_DISTANCE * currentLane, pos.y, pos.z);
+        this.transform.position = new Vector3(GameData.Lane_Start_X + GameData.Lane_Width * currentLane, pos.y, pos.z);
     }
 }
 
