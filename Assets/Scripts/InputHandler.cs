@@ -44,8 +44,9 @@ public class InputHandler : MonoBehaviour
 
     private void SetLane(float value)
     {
+        //5 Lanes
+        //change lane
         transform.position += new Vector3(value, 0, 0);
     }
-    
     
 }
