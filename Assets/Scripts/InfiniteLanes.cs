@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class InfiniteLanes : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private int lanes = 5;
+    [SerializeField] private InputHandler _inputHandler;
 
-    // Update is called once per frame
     void Update()
     {
         
+    }
+    public void SetLane(float value)
+    {
+        if (_inputHandler.Moved() && value > 0.1f || value < -0.1f)
+        {
+            Debug.Log("This Activated");
+            _inputHandler.gameObject.transform.position += new Vector3(value, 0, 0);
+            _inputHandler.setMoved(true);
+            movePlayer();
+        }
+    }
+
+    IEnumerator movePlayer()
+    {
+        
+        yield return new WaitForSeconds(1);
+        _inputHandler.setMoved(false);
     }
 }

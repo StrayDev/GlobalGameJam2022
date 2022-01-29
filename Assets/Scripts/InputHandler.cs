@@ -10,8 +10,8 @@ public class InputHandler : MonoBehaviour
 {
     [SerializeField] private Player player = Player.PlayerOne;
     [SerializeField] private bool moved = false;
-    [SerializeField] private int lanes = 5;
-    
+    [SerializeField] private InfiniteLanes _laneScript;
+
     private InputActions _input = default;
     private InputDevice _device = default;
     
@@ -41,14 +41,17 @@ public class InputHandler : MonoBehaviour
     private void OnMove(InputAction.CallbackContext context)
     {
         var value = context.ReadValue<float>();
-        SetLane(value);
+        Debug.Log("X Axis Value: "+value.ToString());
+        _laneScript.SetLane(value);
     }
 
-    private void SetLane(float value)
-    {
-        //5 Lanes
-        //change lane
-        transform.position += new Vector3(value, 0, 0);
-    }
     
+    public bool Moved()
+    {
+        return moved;
+    }
+    public void setMoved(bool _moved)
+    {
+        moved = _moved;
+    }
 }
