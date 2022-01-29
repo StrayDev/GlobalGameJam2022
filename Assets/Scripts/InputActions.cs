@@ -107,7 +107,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Select"",
+                    ""name"": ""SwapControl"",
                     ""type"": ""Button"",
                     ""id"": ""3f4dfa56-d086-418b-8e25-6da158d95f39"",
                     ""expectedControlType"": ""Button"",
@@ -190,7 +190,18 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard & Mouse"",
-                    ""action"": ""Select"",
+                    ""action"": ""SwapControl"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3dacb5aa-a8f5-40b7-82fd-ed159b1ee2c5"",
+                    ""path"": ""<XInputController>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""GamePadXbox"",
+                    ""action"": ""SwapControl"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -234,7 +245,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Horizontal = m_Player.FindAction("Horizontal", throwIfNotFound: true);
-        m_Player_Select = m_Player.FindAction("Select", throwIfNotFound: true);
+        m_Player_SwapControl = m_Player.FindAction("SwapControl", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -336,13 +347,13 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_Horizontal;
-    private readonly InputAction m_Player_Select;
+    private readonly InputAction m_Player_SwapControl;
     public struct PlayerActions
     {
         private @InputActions m_Wrapper;
         public PlayerActions(@InputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Horizontal => m_Wrapper.m_Player_Horizontal;
-        public InputAction @Select => m_Wrapper.m_Player_Select;
+        public InputAction @SwapControl => m_Wrapper.m_Player_SwapControl;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -355,9 +366,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Horizontal.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHorizontal;
                 @Horizontal.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHorizontal;
                 @Horizontal.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHorizontal;
-                @Select.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSelect;
-                @Select.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSelect;
-                @Select.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSelect;
+                @SwapControl.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwapControl;
+                @SwapControl.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwapControl;
+                @SwapControl.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwapControl;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -365,9 +376,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Horizontal.started += instance.OnHorizontal;
                 @Horizontal.performed += instance.OnHorizontal;
                 @Horizontal.canceled += instance.OnHorizontal;
-                @Select.started += instance.OnSelect;
-                @Select.performed += instance.OnSelect;
-                @Select.canceled += instance.OnSelect;
+                @SwapControl.started += instance.OnSwapControl;
+                @SwapControl.performed += instance.OnSwapControl;
+                @SwapControl.canceled += instance.OnSwapControl;
             }
         }
     }
@@ -398,6 +409,6 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     public interface IPlayerActions
     {
         void OnHorizontal(InputAction.CallbackContext context);
-        void OnSelect(InputAction.CallbackContext context);
+        void OnSwapControl(InputAction.CallbackContext context);
     }
 }
