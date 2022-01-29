@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="228d1cfe-c3e3-4d3b-8989-db92a3909b0b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/InputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InputHandler.cs" afterDir="false" />
-    </list>
+    <list default="true" id="228d1cfe-c3e3-4d3b-8989-db92a3909b0b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/SwapPosition.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DeviceSelector.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/InputHandler.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -37,6 +36,7 @@
       <option name="presentableId" value="Default" />
       <updated>1643453844267</updated>
       <workItem from="1643453845466" duration="1852000" />
+      <workItem from="1643465740264" duration="13000" />
     </task>
     <servers />
   </component>
@@ -44,7 +44,7 @@
     <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

@@ -16,6 +16,8 @@ public class InputHandler : MonoBehaviour
     private InputDevice _device = default;
 
     [SerializeField] private bool canMove = false;
+    [SerializeField] private bool canSwap = false;
+    
     [SerializeField] private UnityEvent<Player> onControlSwapEvent = default;
 
     private void OnEnable()
@@ -47,15 +49,11 @@ public class InputHandler : MonoBehaviour
         else
         {
             // inactive
+            canSwap = true;
             _input.Player.SwapControl.performed += OnSwap;
         }
     }
-
-    private void OnDisable()
-    {
-        _input.Player.Horizontal.performed += OnMove;
-    }
-
+    
     private void OnMove(InputAction.CallbackContext context)
     {
         var value = context.ReadValue<float>();
@@ -64,13 +62,15 @@ public class InputHandler : MonoBehaviour
 
     public void OnSwap(InputAction.CallbackContext context)
     {
+        if (!canSwap) return;
         SwapControl(player);
         onControlSwapEvent.Invoke(player);
     }
 
     public void SwapControl(Player playerID)
     {
-        Debug.Log(player);
+        canSwap = false;
+
         if (!canMove)
         {
             canMove = true;
@@ -83,6 +83,11 @@ public class InputHandler : MonoBehaviour
             _input.Player.SwapControl.performed += OnSwap;
             _input.Player.Horizontal.performed -= OnMove;
         }
+    }
+
+    public void OnSwapComplete()
+    {
+        if (!canMove) canSwap = true;
     }
 
     private void SetLane(float value)
