@@ -5,13 +5,17 @@ using UnityEngine;
 
 public class PlayerTrain : MonoBehaviour
 {
-    private int numGhosts = 0;
-
     [SerializeField]
     private Transform ghostAttachPoint;
 
     [SerializeField]
     private float ghostSpacing;
+
+    [SerializeField]
+    private bool isPhysical;
+
+    private int numGhosts = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +30,7 @@ public class PlayerTrain : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (isPhysical == false) return;
         Ghost ghostParent = collision.collider.GetComponentInParent<Ghost>();
         if (ghostParent)
         {
