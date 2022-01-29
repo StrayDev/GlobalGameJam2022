@@ -6,7 +6,7 @@ public class LaneScript : MonoBehaviour
 {
     [SerializeField] private int currentLane = 3;
     public int CurrentLane => currentLane;
-    [SerializeField] private const float MOVE_DELAY = 0.3f;
+    [SerializeField] private float MOVE_DELAY = 0.3f;
     [SerializeField] private InputHandler _inputHandler;
 
     private bool moving = false;
