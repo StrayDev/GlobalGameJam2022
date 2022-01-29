@@ -23,11 +23,16 @@ public class InputHandler : MonoBehaviour
         
         // set device
         _device = player == Player.PlayerOne ? GameData.Player1Device : GameData.Player2Device;
-        _input.devices = new[] { _device };
-        
+        if (_device != null)
+        {
+            _input.devices = new[] { _device };
+        }
         // set colour 
-        var material = GetComponent<Renderer>().material;
-        material.color = player == Player.PlayerOne ? Color.blue : Color.green;
+        foreach (var renderer in GetComponentsInChildren<Renderer>())
+        {
+            var material = renderer.material;
+            material.color = player == Player.PlayerOne ? Color.blue : Color.green;
+        }
 
         // set callbacks
         _input.Player.Horizontal.performed += OnMove;
