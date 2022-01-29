@@ -26,11 +26,15 @@ public class InputHandler : MonoBehaviour
         _input.devices = new[] { _device };
         
         // set colour 
-        var material = GetComponent<Renderer>().material;
-        material.color = player == Player.PlayerOne ? Color.blue : Color.green;
+        foreach(var renderer in GetComponentsInChildren<Renderer>())
+        {
+            var material = renderer.material;
+            material.color = player == Player.PlayerOne ? Color.blue : Color.green;
+        }
 
         // set callbacks
         _input.Player.Horizontal.performed += OnMove;
+        _laneScript = this.GetComponent<LaneScript>();
     }
 
     private void OnDisable()
@@ -41,7 +45,7 @@ public class InputHandler : MonoBehaviour
     private void OnMove(InputAction.CallbackContext context)
     {
         var value = context.ReadValue<float>();
-        Debug.Log("X Axis Value: "+value.ToString());
+        //Debug.Log("X Axis Value: "+value.ToString());
         _laneScript.SetLane(value);
     }
     
