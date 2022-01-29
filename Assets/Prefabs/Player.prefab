@@ -305,6 +305,7 @@ GameObject:
   - component: {fileID: 5852913895395337212}
   - component: {fileID: 8084861139127568642}
   - component: {fileID: 5852913895395337200}
+  - component: {fileID: 4244887748435862066}
   - component: {fileID: 7483432277861433011}
   m_Layer: 0
   m_Name: Player
@@ -361,6 +362,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
+  moved: 0
+  _laneScript: {fileID: 0}
+--- !u!114 &4244887748435862066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5852913895395337201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b343a899b3fb8ef428dc72f7f7cae0d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLane: 1
+  _inputHandler: {fileID: 0}
 --- !u!114 &7483432277861433011
 MonoBehaviour:
   m_ObjectHideFlags: 0

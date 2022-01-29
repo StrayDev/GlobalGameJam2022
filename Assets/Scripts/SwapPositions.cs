@@ -25,6 +25,7 @@ public class SwapPositions : MonoBehaviour
 
     private Transform frontPlayer = default;
     private Transform backPlayer = default;
+    private float _angle = 180; 
     
     void Start()
     {
@@ -41,20 +42,21 @@ public class SwapPositions : MonoBehaviour
         if (_swapPositionCoroutine != null) return;
         
         // set and run task
-        var b = StartCoroutine(SwapPositionAsync(playerOne, playerTwo));
+        var b = StartCoroutine(SwapPositionCoroutine(playerOne, playerTwo));
     }
 
-    private IEnumerator SwapPositionAsync(Transform p1, Transform p2)
+    private IEnumerator SwapPositionCoroutine(Transform p1, Transform p2)
     {
-        var centerPoint = (frontPlayer.position + backPlayer.position) / 2;
+        var p1centerPoint = (frontPlayer.position + new Vector3(frontPlayer.position.x,0, backPlayer.position.z) ) / 2;
+        var p2centerPoint = (backPlayer.position + new Vector3(backPlayer.position.x,0, frontPlayer.position.z) ) / 2;
 
         var timer = transitionTime;
         while (timer > 0)
         {
-            p1.RotateAround(centerPoint, Vector3.up, 180 / transitionTime * Time.deltaTime);
+            p1.RotateAround(p1centerPoint, Vector3.up, _angle / transitionTime * Time.deltaTime);
             p1.transform.forward = Vector3.forward;
             
-            p2.RotateAround(centerPoint, Vector3.up, 180 / transitionTime * Time.deltaTime);
+            p2.RotateAround(p2centerPoint, Vector3.up, _angle / transitionTime * Time.deltaTime);
             p2.transform.forward = Vector3.forward;
 
 
@@ -64,6 +66,8 @@ public class SwapPositions : MonoBehaviour
         
         // reset task
         _swapPositionCoroutine = null;
+        
+        //_angle = -_angle;
         
         // swap completed
         _swapCompletedEvent.Invoke();
