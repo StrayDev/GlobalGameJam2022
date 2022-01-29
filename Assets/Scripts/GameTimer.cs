@@ -6,7 +6,8 @@ using TMPro;
 public class GameTimer : MonoBehaviour
 {
     //Time Data
-    [SerializeField] private int CountDownTime = 120;
+    public float roundTime { get; private set; } = 120.0f;
+    public float currentTime { get; private set; }
     [SerializeField] private LoadEndScene loadEndScene;
     [SerializeField] private TMP_Text text;
     // Start is called before the first frame update
@@ -17,12 +18,12 @@ public class GameTimer : MonoBehaviour
 
     public IEnumerator CountDown()
     {
-        int currentTime = CountDownTime;
+        currentTime = roundTime;
         while (currentTime > 0)
-        {   
-            yield return new WaitForSeconds(1);
-            currentTime--;
-            text.text = currentTime.ToString();
+        {
+            yield return new WaitForEndOfFrame();
+            currentTime -= Time.deltaTime;
+            text.text = ((int)currentTime).ToString();
         }
         loadEndScene.LoadTimesUp();
         //Game Over here, likely using another script.
