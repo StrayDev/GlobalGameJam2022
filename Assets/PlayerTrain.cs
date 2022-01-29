@@ -32,10 +32,10 @@ public class PlayerTrain : MonoBehaviour
     void Update()
     {
         // REMOVE THIS LATER
-        if(input.Player.Select.WasPressedThisFrame())
+        /*if(input.Player.Select.WasPressedThisFrame())
         {
             RemoveGhosts(2);
-        }
+        }*/
     }
 
     private void OnCollisionEnter(Collision collision)
