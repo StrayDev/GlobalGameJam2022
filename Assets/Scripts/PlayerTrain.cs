@@ -55,10 +55,10 @@ public class PlayerTrain : MonoBehaviour
             ghostsAttached.Add(ghostParent);
         }
         
-        if (collision.gameObject.CompareTag("obstacle"))
+        if (collision.gameObject.CompareTag("Obstacle"))
         {
             RemoveGhosts(1);
-            Debug.Log("obstacle hit");
+            Debug.Log("Obstacle hit");
         }
     }
 
