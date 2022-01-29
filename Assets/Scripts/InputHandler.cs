@@ -10,7 +10,7 @@ public class InputHandler : MonoBehaviour
 {
     [SerializeField] private Player player = Player.PlayerOne;
     [SerializeField] private bool moved = false;
-    [SerializeField] private InfiniteLanes _laneScript;
+    [SerializeField] private LaneScript _laneScript;
 
     private InputActions _input = default;
     private InputDevice _device = default;

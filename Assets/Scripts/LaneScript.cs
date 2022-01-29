@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InfiniteLanes : MonoBehaviour
+public class LaneScript : MonoBehaviour
 {
-    [SerializeField] private int lanes = 5;
+    [SerializeField] private int currentLane = 1;
     [SerializeField] private InputHandler _inputHandler;
 
+    private void Start()
+    {
+        _inputHandler = this.GetComponent<InputHandler>();
+    }
     void Update()
     {
         
@@ -26,6 +30,7 @@ public class InfiniteLanes : MonoBehaviour
     {
         
         yield return new WaitForSeconds(1);
+        Debug.Log("Finished Moving Player");
         _inputHandler.setMoved(false);
     }
 }
