@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/contentModel.xml
+/projectSettingsUpdater.xml
+/.idea.GGJ2022.iml
+/modules.xml
+# Datasource local storage ignored files
+/../../../../../../../../../:\Users\steve\Desktop\ggj2022\GGJ2022\.idea\.idea.GGJ2022\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
