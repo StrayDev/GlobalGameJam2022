@@ -5,6 +5,7 @@ using UnityEngine;
 public class LaneScript : MonoBehaviour
 {
     [SerializeField] private int currentLane = 3;
+    public int CurrentLane => currentLane;
     [SerializeField] private const int MAX_LANE = 4;
     [SerializeField] private const float X_DISTANCE = 2f;
     [SerializeField] private const float X_START = -4f;
@@ -65,4 +66,13 @@ public class LaneScript : MonoBehaviour
         Debug.Log("Finished Moving Player");
         _inputHandler.setMoved(false);
     }
+
+    public void SetLane(int new_lane)
+    {
+        currentLane = new_lane;
+        Vector3 pos = this.transform.position;
+        this.transform.position = new Vector3(X_START + X_DISTANCE * currentLane, pos.y, pos.z);
+    }
 }
+
+
