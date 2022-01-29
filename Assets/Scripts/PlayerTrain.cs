@@ -58,8 +58,7 @@ public class PlayerTrain : MonoBehaviour
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             RemoveGhosts(1);
-            Debug.Log("obstacle hit");
-            collision.gameObject.GetComponentInParent<Obstacle>().killSelf();
+            Debug.Log("Obstacle hit");
         }
     }
 
