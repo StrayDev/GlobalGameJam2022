@@ -23,16 +23,11 @@ public class InputHandler : MonoBehaviour
         
         // set device
         _device = player == Player.PlayerOne ? GameData.Player1Device : GameData.Player2Device;
-        if (_device != null)
-        {
-            _input.devices = new[] { _device };
-        }
+        _input.devices = new[] { _device };
+        
         // set colour 
-        foreach (var renderer in GetComponentsInChildren<Renderer>())
-        {
-            var material = renderer.material;
-            material.color = player == Player.PlayerOne ? Color.blue : Color.green;
-        }
+        var material = GetComponent<Renderer>().material;
+        material.color = player == Player.PlayerOne ? Color.blue : Color.green;
 
         // set callbacks
         _input.Player.Horizontal.performed += OnMove;
@@ -49,7 +44,6 @@ public class InputHandler : MonoBehaviour
         Debug.Log("X Axis Value: "+value.ToString());
         _laneScript.SetLane(value);
     }
-
     
     public bool Moved()
     {
