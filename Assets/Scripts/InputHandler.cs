@@ -11,7 +11,9 @@ public enum Player
 public class InputHandler : MonoBehaviour
 {
     [SerializeField] private Player player = Player.PlayerOne;
-    
+    [SerializeField] private bool moved = false;
+    [SerializeField] private LaneScript _laneScript;
+
     private InputActions _input = default;
     private InputDevice _device = default;
 
@@ -26,18 +28,17 @@ public class InputHandler : MonoBehaviour
         
         // set device
         _device = player == Player.PlayerOne ? GameData.Player1Device : GameData.Player2Device;
-        if (_device != null)
-        {
-            _input.devices = new[] { _device };
-        }
+        _input.devices = new[] { _device };
+        
         // set colour 
-        foreach (var renderer in GetComponentsInChildren<Renderer>())
+        foreach(var renderer in GetComponentsInChildren<Renderer>())
         {
             var material = renderer.material;
             material.color = player == Player.PlayerOne ? Color.blue : Color.green;
         }
 
         // set callbacks
+
         if (player == Player.PlayerOne)
         {
             // active control
@@ -49,6 +50,8 @@ public class InputHandler : MonoBehaviour
             // inactive
             _input.Player.SwapControl.performed += OnSwap;
         }
+
+        _laneScript = this.GetComponent<LaneScript>();
     }
 
     private void OnDisable()
@@ -59,7 +62,8 @@ public class InputHandler : MonoBehaviour
     private void OnMove(InputAction.CallbackContext context)
     {
         var value = context.ReadValue<float>();
-        SetLane(value);
+        //Debug.Log("X Axis Value: "+value.ToString());
+        _laneScript.SetLane(value);
     }
 
     public void OnSwap(InputAction.CallbackContext context)
@@ -85,11 +89,12 @@ public class InputHandler : MonoBehaviour
         }
     }
 
-    private void SetLane(float value)
+    public bool Moved()
     {
-        //5 Lanes
-        //change lane
-        transform.position += new Vector3(value, 0, 0);
+        return moved;
     }
-    
+    public void setMoved(bool _moved)
+    {
+        moved = _moved;
+    }
 }
