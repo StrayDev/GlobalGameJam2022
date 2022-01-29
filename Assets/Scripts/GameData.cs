@@ -13,8 +13,8 @@ public static class GameData
 
     // Lane Info
     public static int Lane_Count = 5;
-    public static float Lane_Width = 2f;
-    public static float Lane_Start_X = -(Lane_Count-1); //Calculates the Intial position from Bottom Left
+    public static float Lane_Width = 2.5f;
+    public static float Lane_Start_X = -(Lane_Count); //Calculates the Intial position from Bottom Left
                                                                      //e.g. -(5-1) = -(4) = X: -4
 
     // Functions
