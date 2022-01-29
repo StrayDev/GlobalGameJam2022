@@ -54,6 +54,12 @@ public class PlayerTrain : MonoBehaviour
             pickUpGhost?.Invoke();
             ghostsAttached.Add(ghostParent);
         }
+        
+        if (collision.gameObject.CompareTag("obstacle"))
+        {
+            RemoveGhosts(1);
+            Debug.Log("obstacle hit");
+        }
     }
 
     public void RemoveGhosts(int numberToRemove)
