@@ -9,7 +9,47 @@ ModelImporter:
   - first:
       74: -8206343707815358202
     second: Circle.001|CircleAction
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: black_metal
+    second: {fileID: 2100000, guid: 85e724352a873a942941c4c92e666337, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: brass
+    second: {fileID: 2100000, guid: 16ffa5709a427514a8119fbcade44517, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dark_wood
+    second: {fileID: 2100000, guid: b8867cf0304a59b40af651f7d2a04633, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass
+    second: {fileID: 2100000, guid: a00a8fa73af1c90438c9a96970522831, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: painted_wood_1
+    second: {fileID: 2100000, guid: 08ff90d9552f7bd45a7d063035869ffe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: painted_wood_2
+    second: {fileID: 2100000, guid: 72512f815608efa46afb51b0aa065819, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: painted_wood_3
+    second: {fileID: 2100000, guid: 646dc5ac062e3a4439786fa351f4fa0f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: silver_metal
+    second: {fileID: 2100000, guid: 2187f0fb5fe42574d9901328bd92312a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

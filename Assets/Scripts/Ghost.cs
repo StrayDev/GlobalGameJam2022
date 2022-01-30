@@ -8,5 +8,7 @@ public class Ghost : MonoBehaviour
     public void disableParticles() {
         var main = particle_system.main;
         main.maxParticles = 0;
+        particle_system.Clear();
+        particle_system.Stop();
     }
 }

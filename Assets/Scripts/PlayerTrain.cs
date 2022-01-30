@@ -29,6 +29,7 @@ public class PlayerTrain : MonoBehaviour
         ghostsAttached = new List<Ghost>();
         input = new InputActions();
         input.Player.Enable();
+        SetPhysical(isPhysical);
     }
 
     // Update is called once per frame
@@ -59,7 +60,8 @@ public class PlayerTrain : MonoBehaviour
         
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            RemoveGhosts(1);
+            RemoveGhosts(3);
+            Destroy(collision.gameObject);
             Debug.Log("Obstacle hit");
         }
     }
@@ -78,12 +80,22 @@ public class PlayerTrain : MonoBehaviour
             ghostsAttached.Remove(ghost);
             numGhosts--;
             GameData.increaseScore(gameObject.GetComponent<InputHandler>().getPlayerID() == Player.PlayerOne,-10);
-            Destroy(ghost.gameObject);
+            ghost.GetComponent<Rigidbody>().useGravity = true;
+            ghost.GetComponent<Rigidbody>().isKinematic = false;
         }
     }
 
     public void SetPhysical(bool physical)
     {
         isPhysical = physical;
+        foreach(Renderer renderer in GetComponentsInChildren<Renderer>())
+        {
+            foreach(Material material in renderer.materials)
+            {
+                Color color = material.color;
+                color.a = isPhysical ? 1.0f : 0.5f;
+                material.color = color;
+            }
+        }
     }
 }
