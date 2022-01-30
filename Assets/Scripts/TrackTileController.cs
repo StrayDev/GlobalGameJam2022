@@ -107,7 +107,7 @@ public class TrackTileController : MonoBehaviour
             uncollected_ghosts += 1;
             ghostSpawned?.Invoke();
 
-        } else if (rnd.Next(101) <= chanceForObstacleToSpawn && canObstacleSpawn && list_of_obstacles.Count <= 10) {
+        } else if (rnd.Next(101) <= chanceForObstacleToSpawn && canObstacleSpawn && list_of_obstacles.Count <= 20) {
             Transform spawn_point = objectSpawnPoints[rnd.Next(objectSpawnPoints.Count)];
             GameObject obs = Instantiate(obstaclePrefab,spawn_point.transform);
             obs.transform.parent = _track_transform;
