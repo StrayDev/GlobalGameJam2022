@@ -7,6 +7,6 @@ public class LoadEndScene : MonoBehaviour
 {
     public void LoadTimesUp()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(2,LoadSceneMode.Additive);
     }
 }

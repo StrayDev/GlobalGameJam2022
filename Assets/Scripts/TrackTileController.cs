@@ -41,6 +41,8 @@ public class TrackTileController : MonoBehaviour
     [SerializeField] UnityEvent ghostSpawned = default;
     [SerializeField] UnityEvent ObstacleSpawned = default;
 
+    private bool game_over = false;
+    private float track_speed = 0;
 
 
 
@@ -68,10 +70,13 @@ public class TrackTileController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float trackSpeed = scrollSpeedCurve.Evaluate((timer.roundTime - timer.currentTime) / timer.roundTime) * maximumScrollSpeed;
+        if (!game_over) {
+            track_speed = scrollSpeedCurve.Evaluate((timer.roundTime - timer.currentTime) / timer.roundTime) * maximumScrollSpeed;
+        }
+
         foreach(GameObject trackTile in trackTiles)
         {
-            trackTile.transform.position -= (Vector3.forward * trackSpeed * Time.deltaTime);
+            trackTile.transform.position -= (Vector3.forward * track_speed * Time.deltaTime);
             if(trackTile.transform.position.z < despawnTrackTilePoint.z)
             {
                 trackTile.transform.position = respawnTrackTilePoint - (despawnTrackTilePoint - trackTile.transform.position);
@@ -108,6 +113,24 @@ public class TrackTileController : MonoBehaviour
             list_of_obstacles.Add(obs);
             ObstacleSpawned?.Invoke();
         }
+    }
+
+    public void startEndGameSequence() {
+        game_over = true;
+        StartCoroutine(slowDownTrains());
+    }
+
+    private IEnumerator slowDownTrains() {
+        float original_speed = track_speed;
+        float duration = 2;
+        float e_time = 0;
+        while (e_time < duration)
+        {
+            track_speed = Mathf.Lerp(original_speed,0,e_time/duration);
+            e_time += Time.deltaTime;
+            yield return null;
+        }
+        track_speed = 0;
     }
 
     public void ghostPickedUp() {

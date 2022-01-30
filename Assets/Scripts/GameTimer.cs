@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using TMPro;
 
 public class GameTimer : MonoBehaviour
@@ -10,6 +11,9 @@ public class GameTimer : MonoBehaviour
     public float currentTime { get; private set; }
     [SerializeField] private LoadEndScene loadEndScene;
     [SerializeField] private TMP_Text text;
+
+    [SerializeField] private UnityEvent gameOver = default;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +29,7 @@ public class GameTimer : MonoBehaviour
             currentTime -= Time.deltaTime;
             text.text = ((int)currentTime).ToString();
         }
+        gameOver?.Invoke();
         loadEndScene.LoadTimesUp();
         //Game Over here, likely using another script.
     }

@@ -53,6 +53,7 @@ public class PlayerTrain : MonoBehaviour
             numGhosts++;
             pickUpGhost?.Invoke();
             ghostsAttached.Add(ghostParent);
+            ghostParent.disableParticles();
         }
         
         if (collision.gameObject.CompareTag("Obstacle"))

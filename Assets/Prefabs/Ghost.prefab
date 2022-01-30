@@ -81,6 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a86ab1417b5d64e4bac47e429e85c5f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particle_system: {fileID: 8332614870545510684}
 --- !u!54 &1364281925033189864
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -128,7 +129,7 @@ MonoBehaviour:
   PlayEvent: 7
   StopEvent: 0
   AllowFadeout: 1
-  TriggerOnce: 0
+  TriggerOnce: 1
   Preload: 0
   Params: []
   OverrideAttenuation: 0

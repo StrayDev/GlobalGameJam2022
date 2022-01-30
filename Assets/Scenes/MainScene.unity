@@ -152,7 +152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
       propertyPath: timeTillObstaclesSpawn
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 778178741389504627, guid: 50426cb884518fe45997907dafca79d3, type: 3}
       propertyPath: chanceForObstacleToSpawn
@@ -1064,6 +1064,34 @@ PrefabInstance:
     - target: {fileID: 3714854932360199288, guid: 8d2c96ba77b83934e88a296644ffa0db, type: 3}
       propertyPath: CountDownTime
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714854932360199288, guid: 8d2c96ba77b83934e88a296644ffa0db, type: 3}
+      propertyPath: gameOver.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714854932360199288, guid: 8d2c96ba77b83934e88a296644ffa0db, type: 3}
+      propertyPath: gameOver.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714854932360199288, guid: 8d2c96ba77b83934e88a296644ffa0db, type: 3}
+      propertyPath: gameOver.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 305332421}
+    - target: {fileID: 3714854932360199288, guid: 8d2c96ba77b83934e88a296644ffa0db, type: 3}
+      propertyPath: gameOver.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714854932360199288, guid: 8d2c96ba77b83934e88a296644ffa0db, type: 3}
+      propertyPath: gameOver.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: startEndGameSequence
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714854932360199288, guid: 8d2c96ba77b83934e88a296644ffa0db, type: 3}
+      propertyPath: gameOver.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TrackTileController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714854932360199288, guid: 8d2c96ba77b83934e88a296644ffa0db, type: 3}
+      propertyPath: gameOver.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5299127145318795189, guid: 8d2c96ba77b83934e88a296644ffa0db, type: 3}
       propertyPath: m_RootOrder
