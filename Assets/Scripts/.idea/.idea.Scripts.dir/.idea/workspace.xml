@@ -2,7 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="228d1cfe-c3e3-4d3b-8989-db92a3909b0b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../.vscode/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Prefabs/Obstacle.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Prefabs/Obstacle.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaneScript.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaneScript.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SyncLanes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SyncLanes.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DumbMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumbMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DumbMovement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/DumbMovement.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ghost.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Ghost.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ghost.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Ghost.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PlayerTrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerTrain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PlayerTrain.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerTrain.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InputHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrackTileController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TrackTileController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrackTileController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/TrackTileController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +57,9 @@
       <option name="presentableId" value="Default" />
       <updated>1643453844267</updated>
       <workItem from="1643453845466" duration="1852000" />
+      <workItem from="1643465740264" duration="13000" />
+      <workItem from="1643473032020" duration="33000" />
+      <workItem from="1643473109198" duration="3000" />
     </task>
     <servers />
   </component>
@@ -44,7 +67,7 @@
     <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
