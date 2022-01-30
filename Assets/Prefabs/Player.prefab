@@ -251,6 +251,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5539189821225957180, guid: 46698afe47d39a74ba3bd8f8d77f7a0d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5539189821225957180, guid: 46698afe47d39a74ba3bd8f8d77f7a0d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5539189821225957180, guid: 46698afe47d39a74ba3bd8f8d77f7a0d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.040607214
+      objectReference: {fileID: 0}
     - target: {fileID: 5552762049877873373, guid: 46698afe47d39a74ba3bd8f8d77f7a0d, type: 3}
       propertyPath: m_Name
       value: Train
