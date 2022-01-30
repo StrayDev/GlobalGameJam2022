@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000021F711FE288 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000001A7E51B9F38 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -16,25 +16,25 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] SoundI::release                          :  (0000021F63438508)
-[LOG] SoundI::release                          :     508480-FreightTrainHorn20 (0000021F70D79738)
-[LOG] SoundI::release                          : Ragtime 01 (0000021F4AA325F8)
-[LOG] SoundI::release                          :     Ragtime 01 (0000021E5A9ED988)
-[LOG] SoundI::release                          :     Ragtime 01 (0000021E89E139B8)
-[LOG] SoundI::release                          :  (0000021F63438C38)
-[LOG] SoundI::release                          :     508481-FreightTrainHorn21 (0000021F70D78558)
-[LOG] SoundI::release                          :  (0000021F63438AC8)
-[LOG] SoundI::release                          :     508482-FreightTrainHorn22 (0000021F70D798D8)
-[LOG] SoundI::release                          :  (0000021F4B43D638)
-[LOG] SoundI::release                          :     508483-FreightTrainHorn23 (0000021F70D78218)
-[LOG] SoundI::release                          :  (0000021F4B43DD68)
-[LOG] SoundI::release                          :     508484-FreightTrainHorn24 (0000021F70D79598)
-[LOG] SoundI::release                          :  (0000021F634380B8)
-[LOG] SoundI::release                          :     508485-FreightTrainHorn25 (0000021F70D7A918)
-[LOG] SoundI::release                          :  (0000021F4B43D078)
-[LOG] SoundI::release                          :     500593-Train_Movement_-Large_Locomotive_Steam_Train_Engine_Moving_on_Tracks_-Loop_01_016488_ (0000021F70D79C18)
-[LOG] SoundI::release                          :  (0000021F4B43D7A8)
-[LOG] SoundI::release                          :     500594-Train_Movement_-Large_Locomotive_Steam_Train_Engine_Moving_on_Tracks_-Loop_02_016489_ (0000021F70D7A5D8)
+[LOG] SoundI::release                          :  (000001A7FAD86EF8)
+[LOG] SoundI::release                          :     508480-FreightTrainHorn20 (000001A7E543C328)
+[LOG] SoundI::release                          : Ragtime 01 (000001A4D2A8F308)
+[LOG] SoundI::release                          :     Ragtime 01 (000001A7E54328C8)
+[LOG] SoundI::release                          :     Ragtime 01 (000001A7C9B285D8)
+[LOG] SoundI::release                          :  (000001A7FAD85AD8)
+[LOG] SoundI::release                          :     508481-FreightTrainHorn21 (000001A7E543A5E8)
+[LOG] SoundI::release                          :  (000001A7FAD867C8)
+[LOG] SoundI::release                          :     508482-FreightTrainHorn22 (000001A7E543A2A8)
+[LOG] SoundI::release                          :  (000001A7FAD85968)
+[LOG] SoundI::release                          :     508483-FreightTrainHorn23 (000001A7E543AC68)
+[LOG] SoundI::release                          :  (000001A7FAD86D88)
+[LOG] SoundI::release                          :     508484-FreightTrainHorn24 (000001A7E543B7C8)
+[LOG] SoundI::release                          :  (000001A7FAD86658)
+[LOG] SoundI::release                          :     508485-FreightTrainHorn25 (000001A7E543C9A8)
+[LOG] SoundI::release                          :  (000001A7FAD85C48)
+[LOG] SoundI::release                          :     500593-Train_Movement_-Large_Locomotive_Steam_Train_Engine_Moving_on_Tracks_-Loop_01_016488_ (000001A7E543B968)
+[LOG] SoundI::release                          :  (000001A7FAD864E8)
+[LOG] SoundI::release                          :     500594-Train_Movement_-Large_Locomotive_Steam_Train_Engine_Moving_on_Tracks_-Loop_02_016489_ (000001A7E543BE48)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients

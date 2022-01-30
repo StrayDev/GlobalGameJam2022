@@ -684,6 +684,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4dd859e3c5a62e6408e7a1327ae7fbb4, type: 2}
+    - target: {fileID: 5339659875903469088, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 5852913895395337200, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
       propertyPath: player
       value: 1
@@ -1095,6 +1099,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3d4cc7c2acb82b948b5f3b5fa775ff07, type: 2}
+    - target: {fileID: 5339659875903469088, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 5852913895395337200, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
       propertyPath: onControlSwapEvent.m_PersistentCalls.m_Calls.Array.size
       value: 2
