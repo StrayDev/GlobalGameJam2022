@@ -54,6 +54,7 @@ public class PlayerTrain : MonoBehaviour
             pickUpGhost?.Invoke();
             ghostsAttached.Add(ghostParent);
             ghostParent.disableParticles();
+            GameData.increaseScore(gameObject.GetComponent<InputHandler>().getPlayerID() == Player.PlayerOne,10);
         }
         
         if (collision.gameObject.CompareTag("Obstacle"))
@@ -76,6 +77,7 @@ public class PlayerTrain : MonoBehaviour
         {
             ghostsAttached.Remove(ghost);
             numGhosts--;
+            GameData.increaseScore(gameObject.GetComponent<InputHandler>().getPlayerID() == Player.PlayerOne,-10);
             Destroy(ghost.gameObject);
         }
     }

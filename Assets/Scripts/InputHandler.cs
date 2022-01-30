@@ -24,6 +24,8 @@ public class InputHandler : MonoBehaviour
 
     private PlayerTrain train;
 
+    public Player getPlayerID() => player;
+
     private void OnEnable()
     {
         // set the input

@@ -24,4 +24,12 @@ public static class GameData
     // Functions
     public static float getLaneXPos(float _lane) => Lane_Start_X + Lane_Width*_lane;
     public static void resetAllScore() { p1_score = 0; p2_score = 0; }
+
+    public static void increaseScore(bool _player_1, int _val) {
+        if (_player_1) {
+            p1_score += _val;
+        } else {
+            p2_score += _val;
+        }
+    }
 }

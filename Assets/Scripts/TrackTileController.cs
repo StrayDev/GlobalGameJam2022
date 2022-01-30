@@ -49,6 +49,7 @@ public class TrackTileController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameData.resetAllScore();
         rnd = new System.Random(Guid.NewGuid().GetHashCode());
         list_of_ghosts = new List<GameObject>();
         list_of_obstacles = new List<GameObject>();
