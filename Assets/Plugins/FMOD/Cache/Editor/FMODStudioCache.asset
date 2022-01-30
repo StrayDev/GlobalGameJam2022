@@ -62,7 +62,7 @@ MonoBehaviour:
   ID:
     data1: 2856997131
     data2: 2478947305
-  Exists: 1
+  Exists: 0
 --- !u!114 &-7203850978154247219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,13 +458,8 @@ MonoBehaviour:
   - {fileID: -1689818946085022449}
   - {fileID: -5192632368276369904}
   EditorParameters:
-<<<<<<< HEAD
   - {fileID: -4196300761423732422}
   - {fileID: -1110997504757595225}
-=======
-  - {fileID: -7298818252206310652}
-  - {fileID: 7558159697938272564}
->>>>>>> 3f76fc85066cfd3f51b0b299b3bd20e532914cbb
   MasterBanks:
   - {fileID: 2532319715270895854}
   StringsBanks:
@@ -742,7 +737,7 @@ MonoBehaviour:
   ID:
     data1: 1665495525
     data2: 4074951653
-  Exists: 1
+  Exists: 0
 --- !u!114 &8651576023552040732
 MonoBehaviour:
   m_ObjectHideFlags: 0
