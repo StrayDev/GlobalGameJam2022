@@ -11,6 +11,8 @@ public class TrackTileController : MonoBehaviour
     [SerializeField]
     private Transform trackTileParent;
 
+    [SerializeField] GameTimer timer;
+
     [SerializeField] private GameObject ghostPrefab;
     [SerializeField] private GameObject obstaclePrefab;
     [SerializeField] private List<Transform> objectSpawnPoints;
@@ -29,7 +31,8 @@ public class TrackTileController : MonoBehaviour
 
     private List<GameObject> trackTiles;
 
-    public float trackScrollSpeed = 5.0f;
+    [SerializeField] private AnimationCurve scrollSpeedCurve;
+    [SerializeField] private float maximumScrollSpeed = 500.0f;
 
     private System.Random rnd; 
 
@@ -65,9 +68,10 @@ public class TrackTileController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float trackSpeed = scrollSpeedCurve.Evaluate((timer.roundTime - timer.currentTime) / timer.roundTime) * maximumScrollSpeed;
         foreach(GameObject trackTile in trackTiles)
         {
-            trackTile.transform.position -= (Vector3.forward * trackScrollSpeed * Time.deltaTime);
+            trackTile.transform.position -= (Vector3.forward * trackSpeed * Time.deltaTime);
             if(trackTile.transform.position.z < despawnTrackTilePoint.z)
             {
                 trackTile.transform.position = respawnTrackTilePoint - (despawnTrackTilePoint - trackTile.transform.position);

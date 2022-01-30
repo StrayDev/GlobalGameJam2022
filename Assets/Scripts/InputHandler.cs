@@ -22,6 +22,8 @@ public class InputHandler : MonoBehaviour
     
     [SerializeField] private UnityEvent<Player> onControlSwapEvent = default;
 
+    private PlayerTrain train;
+
     private void OnEnable()
     {
         // set the input
@@ -58,6 +60,7 @@ public class InputHandler : MonoBehaviour
         }
 
         _laneScript = this.GetComponent<LaneScript>();
+        train = GetComponent<PlayerTrain>();
     }
     
     private void OnMove(InputAction.CallbackContext context)
@@ -77,6 +80,7 @@ public class InputHandler : MonoBehaviour
     public void SwapControl(Player playerID)
     {
         canSwap = false;
+        train.SetPhysical(false);
 
         if (!canMove)
         {
@@ -94,7 +98,11 @@ public class InputHandler : MonoBehaviour
 
     public void OnSwapComplete()
     {
-        if (!canMove) canSwap = true;
+        if (!canMove)
+        {
+            canSwap = true;
+            train.SetPhysical(true);
+        }
     }
     
     public bool Moved()

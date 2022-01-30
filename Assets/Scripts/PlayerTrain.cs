@@ -48,7 +48,7 @@ public class PlayerTrain : MonoBehaviour
         if (ghostParent && ghostsAttached.Contains(ghostParent) == false)
         {
             ghostParent.transform.SetParent(transform);
-            ghostParent.transform.position = ghostAttachPoint.position - (transform.forward * ghostSpacing * Mathf.Ceil(numGhosts/2) + (transform.right * (numGhosts % 2)));
+            ghostParent.transform.position = ghostAttachPoint.position - (transform.forward * ghostSpacing * Mathf.Ceil(numGhosts/3) + (transform.right * (numGhosts % 3)));
             ghostParent.GetComponentInChildren<Collider>().enabled = false;
             numGhosts++;
             pickUpGhost?.Invoke();
@@ -77,5 +77,10 @@ public class PlayerTrain : MonoBehaviour
             numGhosts--;
             Destroy(ghost.gameObject);
         }
+    }
+
+    public void SetPhysical(bool physical)
+    {
+        isPhysical = physical;
     }
 }
