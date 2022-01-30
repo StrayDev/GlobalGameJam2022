@@ -65,9 +65,11 @@ public class InputHandler : MonoBehaviour
     
     private void OnMove(InputAction.CallbackContext context)
     {
-        var value = context.ReadValue<float>();
-        //Debug.Log("X Axis Value: "+value.ToString());
-        _laneScript.SetLane(value);
+        if (!GameData.isMidSwap()) {
+            var value = context.ReadValue<float>();
+            //Debug.Log("X Axis Value: "+value.ToString());
+            _laneScript.SetLane(value);
+        }
     }
 
     public void OnSwap(InputAction.CallbackContext context)
@@ -80,6 +82,7 @@ public class InputHandler : MonoBehaviour
     public void SwapControl(Player playerID)
     {
         canSwap = false;
+        GameData.setMidSwap(true);
         train.SetPhysical(false);
 
         if (!canMove)
@@ -98,6 +101,7 @@ public class InputHandler : MonoBehaviour
 
     public void OnSwapComplete()
     {
+        GameData.setMidSwap(false);
         if (!canMove)
         {
             canSwap = true;

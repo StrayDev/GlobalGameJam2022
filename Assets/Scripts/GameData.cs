@@ -16,6 +16,10 @@ public static class GameData
     public static float Lane_Width = 2.5f;
     public static float Lane_Start_X = -(Lane_Count); //Calculates the Intial position from Bottom Left
                                                                      //e.g. -(5-1) = -(4) = X: -4
+    public static bool mid_swap {get; private set;} = false;
+
+    public static bool isMidSwap() => mid_swap;
+    public static void setMidSwap(bool _new_state) {mid_swap = _new_state;}
 
     // Functions
     public static float getLaneXPos(float _lane) => Lane_Start_X + Lane_Width*_lane;
