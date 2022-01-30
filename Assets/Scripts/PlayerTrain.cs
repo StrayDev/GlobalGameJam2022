@@ -61,7 +61,7 @@ public class PlayerTrain : MonoBehaviour
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             RemoveGhosts(3);
-            Destroy(collision.gameObject);
+            StartCoroutine(collision.gameObject.GetComponent<Obstacle>().killSelf());
             Debug.Log("Obstacle hit");
         }
     }
