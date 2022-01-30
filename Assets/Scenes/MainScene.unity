@@ -617,7 +617,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1404743514115133049, guid: 6938347e787fb6241b784d983e4e4104, type: 3}
       propertyPath: m_Name
-      value: GlobalVolume (1)
+      value: FogGlobalVolume
       objectReference: {fileID: 0}
     - target: {fileID: 1404743514115133051, guid: 6938347e787fb6241b784d983e4e4104, type: 3}
       propertyPath: m_RootOrder
