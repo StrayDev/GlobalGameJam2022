@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 4
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 50.689636, g: 52.104614, b: 52.08954, a: 1}
+  m_IndirectSpecularColor: {r: 50.600254, g: 52.01246, b: 51.998337, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -684,6 +684,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 378877657968763652, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2571599918812337570, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1107,6 +1111,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 378877657968763652, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3220987655000853633, guid: 805950f6331702a4b8e4f8a1687c30b0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1312,6 +1320,14 @@ PrefabInstance:
     - target: {fileID: 146657134735896086, guid: 8d2c96ba77b83934e88a296644ffa0db, type: 3}
       propertyPath: m_Name
       value: TimerSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714854932360199288, guid: 8d2c96ba77b83934e88a296644ffa0db, type: 3}
+      propertyPath: musicPath
+      value: event:/Music/Music 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714854932360199288, guid: 8d2c96ba77b83934e88a296644ffa0db, type: 3}
+      propertyPath: trainPath
+      value: event:/Train/Movement
       objectReference: {fileID: 0}
     - target: {fileID: 3714854932360199288, guid: 8d2c96ba77b83934e88a296644ffa0db, type: 3}
       propertyPath: CountDownTime

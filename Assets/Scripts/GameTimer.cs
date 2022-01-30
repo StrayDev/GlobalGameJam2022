@@ -16,8 +16,11 @@ public class GameTimer : MonoBehaviour
     [SerializeField] private UnityEvent gameOver = default;
 
     private FMOD.Studio.EventInstance trainEvent;
+    private FMOD.Studio.EventInstance musicEvent;
     [SerializeField] private float progress = 0;    
     [SerializeField] [FMODUnity.EventRef] private string trainPath; 
+    [SerializeField] [FMODUnity.EventRef] private string musicPath; 
+
 
     // Start is called before the first frame update0
     void Start()
@@ -27,6 +30,10 @@ public class GameTimer : MonoBehaviour
         StartCoroutine(CountDown());
         trainEvent.start();
         trainEvent.release();
+        musicEvent = FMODUnity.RuntimeManager.CreateInstance(musicPath);
+        //trainEvent.setParameterByName("Progress", progress);
+        musicEvent.start();
+        musicEvent.release();
     }
 
     public IEnumerator CountDown()
@@ -46,5 +53,6 @@ public class GameTimer : MonoBehaviour
 
     void update() {
         trainEvent.setParameterByName("Progress",progress);
+        musicEvent.setParameterByName("Progress",progress);
     }
 }

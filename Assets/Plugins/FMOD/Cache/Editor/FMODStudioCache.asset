@@ -20,10 +20,50 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 164211785990655994}
+  - {fileID: -2082651129049371806}
   MinDistance: 0
   MaxDistance: 0
   Length: 179400
+--- !u!114 &-8673135505965935647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TrainState
+  m_EditorClassIdentifier: 
+  Name: TrainState
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1665495525
+    data2: 4074951653
+  Exists: 0
+--- !u!114 &-7807864812229973724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TrainState
+  m_EditorClassIdentifier: 
+  Name: TrainState
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1665495525
+    data2: 4074951653
+  Exists: 0
 --- !u!114 &-7369463774290390539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,6 +127,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 10000
   Length: 0
+--- !u!114 &-6728035153511207278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Movement/Progress
+  m_EditorClassIdentifier: 
+  Name: Progress
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-6006747706797408959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +300,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 5000
+--- !u!114 &-2082651129049371806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music 2/Progress
+  m_EditorClassIdentifier: 
+  Name: Progress
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-1937951235258901344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,7 +464,7 @@ MonoBehaviour:
   Path: Assets/Audio/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637791571450351374
+  lastModified: 637791584140000000
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -424,7 +504,7 @@ MonoBehaviour:
   - {fileID: 2532319715270895854}
   StringsBanks:
   - {fileID: -325410020429071581}
-  stringsBankWriteTime: 637791571450351374
+  stringsBankWriteTime: 637791584140000000
   cacheVersion: 6
 --- !u!114 &164211785990655994
 MonoBehaviour:
@@ -566,7 +646,7 @@ MonoBehaviour:
   Path: Assets/Audio/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637791571449942472
+  lastModified: 637791584140000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -636,6 +716,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3700
+--- !u!114 &3280539101372895097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music 2/Progress
+  m_EditorClassIdentifier: 
+  Name: Progress
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &4990271486832175252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -761,6 +861,26 @@ MonoBehaviour:
     data1: 1665495525
     data2: 4074951653
   Exists: 0
+--- !u!114 &7885926959760052436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Movement/Progress
+  m_EditorClassIdentifier: 
+  Name: Progress
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &8274002364886280652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -798,10 +918,10 @@ MonoBehaviour:
   Banks:
   - {fileID: 2532319715270895854}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 8274002364886280652}
-  MinDistance: 1
-  MaxDistance: 10000
+  - {fileID: -6728035153511207278}
+  MinDistance: 0
+  MaxDistance: 0
   Length: 5336
