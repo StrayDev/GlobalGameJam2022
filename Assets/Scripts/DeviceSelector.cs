@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using FMODUnity;
 
 public class DeviceSelector : MonoBehaviour
 {
     // events to trigger UI
+    [SerializeField] private StudioEventEmitter playerJoinNoise;
+
     [SerializeField] private UnityEvent<InputDevice> playerOneDeviceSet = default;
     [SerializeField] private UnityEvent<InputDevice> playerTwoDeviceSet = default;
     
@@ -40,6 +43,7 @@ public class DeviceSelector : MonoBehaviour
         if (GameData.Player1Device == null && GameData.Player2Device != device)
         {
             GameData.Player1Device = device;
+            playerJoinNoise.Play();
             playerOneDeviceSet.Invoke(device);
             return;
         }
@@ -48,6 +52,7 @@ public class DeviceSelector : MonoBehaviour
         if (GameData.Player2Device == null && GameData.Player1Device != device)
         {
             GameData.Player2Device = device;
+            playerJoinNoise.Play();
             playerTwoDeviceSet.Invoke(device);
         }
         

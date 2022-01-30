@@ -80,6 +80,7 @@ public class InputHandler : MonoBehaviour
         canSwap = false;
         GameData.setMidSwap(true);
         train.SetPhysical(false);
+        train.hornNoise.Play();
 
         if (!canMove)
         {

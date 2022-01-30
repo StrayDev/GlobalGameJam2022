@@ -19,7 +19,8 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 164211785990655994}
   MinDistance: 0
   MaxDistance: 0
   Length: 179400
@@ -189,11 +190,11 @@ MonoBehaviour:
   Banks:
   - {fileID: 2532319715270895854}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 10000
+  MinDistance: 0
+  MaxDistance: 0
   Length: 4286
 --- !u!114 &-3978018184273702211
 MonoBehaviour:
@@ -281,7 +282,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 3176
 --- !u!114 &-980350234456683380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,7 +348,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 500
 --- !u!114 &-553049030355166589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,11 +384,11 @@ MonoBehaviour:
   Path: Assets/Audio/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637791460913415010
+  lastModified: 637791571450351374
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 1358
+    Value: 1394
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -417,13 +418,34 @@ MonoBehaviour:
   - {fileID: 2978028293433235338}
   - {fileID: -1689818946085022449}
   - {fileID: -5192632368276369904}
+  - {fileID: 5717120911007818393}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2532319715270895854}
   StringsBanks:
   - {fileID: -325410020429071581}
-  stringsBankWriteTime: 637791460913415010
+  stringsBankWriteTime: 637791571450351374
   cacheVersion: 6
+--- !u!114 &164211785990655994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music 2/Progress
+  m_EditorClassIdentifier: 
+  Name: Progress
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 2856997131
+    data2: 2478947305
+  Exists: 1
 --- !u!114 &453137164455475784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,11 +483,11 @@ MonoBehaviour:
   Banks:
   - {fileID: 2532319715270895854}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 10000
+  MinDistance: 0
+  MaxDistance: 0
   Length: 2000
 --- !u!114 &1663266054778535526
 MonoBehaviour:
@@ -487,6 +509,26 @@ MonoBehaviour:
     data1: 1665495525
     data2: 4074951653
   Exists: 1
+--- !u!114 &1801815967689229825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TrainState
+  m_EditorClassIdentifier: 
+  Name: TrainState
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1665495525
+    data2: 4074951653
+  Exists: 0
 --- !u!114 &1904785456461840933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -524,7 +566,7 @@ MonoBehaviour:
   Path: Assets/Audio/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637791460913055963
+  lastModified: 637791571449942472
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -550,7 +592,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 5465
 --- !u!114 &3066124649314707423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -593,7 +635,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1800
+  Length: 3700
 --- !u!114 &4990271486832175252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -614,6 +656,29 @@ MonoBehaviour:
     data1: 1665495525
     data2: 4074951653
   Exists: 0
+--- !u!114 &5717120911007818393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Train/Steam
+  m_EditorClassIdentifier: 
+  Path: event:/Train/Steam
+  guid: b1398829f92f4f44aee45158f3fcc63c
+  Banks:
+  - {fileID: 2532319715270895854}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 10000
+  Length: 7500
 --- !u!114 &6457150468695512098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -696,6 +761,26 @@ MonoBehaviour:
     data1: 1665495525
     data2: 4074951653
   Exists: 0
+--- !u!114 &8274002364886280652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Movement/Progress
+  m_EditorClassIdentifier: 
+  Name: Progress
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 2856997131
+    data2: 2478947305
+  Exists: 1
 --- !u!114 &8651576023552040732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -715,7 +800,8 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 8274002364886280652}
   MinDistance: 1
   MaxDistance: 10000
   Length: 5336
