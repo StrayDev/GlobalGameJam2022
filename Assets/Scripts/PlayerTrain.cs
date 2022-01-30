@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using FMODUnity;
 
 public class PlayerTrain : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class PlayerTrain : MonoBehaviour
     [SerializeField] UnityEvent pickUpGhost = default; 
 
     private List<Ghost> ghostsAttached;
+
+    public StudioEventEmitter hornNoise;
 
     private int numGhosts = 0;
 
@@ -55,12 +58,16 @@ public class PlayerTrain : MonoBehaviour
             pickUpGhost?.Invoke();
             ghostsAttached.Add(ghostParent);
             ghostParent.disableParticles();
+            StudioEventEmitter emitter = ghostParent.GetComponent<StudioEventEmitter>();
+            emitter.Play();
             GameData.increaseScore(gameObject.GetComponent<InputHandler>().getPlayerID() == Player.PlayerOne,10);
         }
         
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             RemoveGhosts(3);
+            StudioEventEmitter emitter = collision.gameObject.GetComponent<StudioEventEmitter>();
+            emitter.Play();
             StartCoroutine(collision.gameObject.GetComponent<Obstacle>().killSelf());
             Debug.Log("Obstacle hit");
         }
