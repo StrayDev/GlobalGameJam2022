@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
 
+
 public class GameTimer : MonoBehaviour
 {
     //Time Data
@@ -14,10 +15,18 @@ public class GameTimer : MonoBehaviour
 
     [SerializeField] private UnityEvent gameOver = default;
 
-    // Start is called before the first frame update
+    private FMOD.Studio.EventInstance trainEvent;
+    [SerializeField] private float progress = 0;    
+    [SerializeField] [FMODUnity.EventRef] private string trainPath; 
+
+    // Start is called before the first frame update0
     void Start()
     {
+        trainEvent = FMODUnity.RuntimeManager.CreateInstance(trainPath);
+        //trainEvent.setParameterByName("Progress", progress);
         StartCoroutine(CountDown());
+        trainEvent.start();
+        trainEvent.release();
     }
 
     public IEnumerator CountDown()
@@ -25,12 +34,17 @@ public class GameTimer : MonoBehaviour
         currentTime = roundTime;
         while (currentTime > 0)
         {
-            yield return new WaitForEndOfFrame();
             currentTime -= Time.deltaTime;
             text.text = ((int)currentTime).ToString();
+            progress = (currentTime/roundTime)*10;
+            yield return new WaitForEndOfFrame();
         }
         gameOver?.Invoke();
         loadEndScene.LoadTimesUp();
         //Game Over here, likely using another script.
+    }
+
+    void update() {
+        trainEvent.setParameterByName("Progress",progress);
     }
 }
