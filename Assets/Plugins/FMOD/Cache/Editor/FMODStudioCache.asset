@@ -288,6 +288,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-553049030355166589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TrainState
+  m_EditorClassIdentifier: 
+  Name: TrainState
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1665495525
+    data2: 4074951653
+  Exists: 0
 --- !u!114 &-325410020429071581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,7 +323,7 @@ MonoBehaviour:
   Path: Assets/Audio/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637791460913415010
+  lastModified: 637791475493056063
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -342,7 +362,7 @@ MonoBehaviour:
   - {fileID: 2532319715270895854}
   StringsBanks:
   - {fileID: -325410020429071581}
-  stringsBankWriteTime: 637791460913415010
+  stringsBankWriteTime: 637791475493056063
   cacheVersion: 6
 --- !u!114 &453137164455475784
 MonoBehaviour:
@@ -444,7 +464,7 @@ MonoBehaviour:
   Path: Assets/Audio/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637791460913055963
+  lastModified: 637791475493335922
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -471,6 +491,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &3066124649314707423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Progress
+  m_EditorClassIdentifier: 
+  Name: Progress
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 2856997131
+    data2: 2478947305
+  Exists: 0
 --- !u!114 &3100537858620504683
 MonoBehaviour:
   m_ObjectHideFlags: 0

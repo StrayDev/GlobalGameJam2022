@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 4244887748435862066}
   - component: {fileID: 7483432277861433011}
   - component: {fileID: 378877657968763652}
+  - component: {fileID: 4415732244165484183}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -61,8 +62,8 @@ Transform:
   m_GameObject: {fileID: 5852913895395337201}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6917079239311985641}
   - {fileID: 4648243199814257019}
@@ -161,6 +162,19 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!65 &4415732244165484183
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5852913895395337201}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 8, z: 10}
+  m_Center: {x: 0, y: 4, z: 0}
 --- !u!1001 &487918827510694172
 PrefabInstance:
   m_ObjectHideFlags: 0
